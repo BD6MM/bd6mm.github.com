@@ -589,8 +589,8 @@ a:hover {
 
 /* Backgroud image */
 #bg {
-  background-image: url("images/body.jpg");
-  background-color: #050a10;
+  background-image: url("");
+  background-color: #ECECEC;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
