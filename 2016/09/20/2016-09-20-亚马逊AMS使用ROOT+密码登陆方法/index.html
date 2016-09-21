@@ -15,16 +15,58 @@
   
   <title>2016-09-20-亚马逊AMS使用ROOT+密码登陆方法 | BD6MM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、先用AMS的密钥对登陆;2、执行  sudo passwd root为root用户设置密码；3、执行su输入密码，切换到root用户，然后  sudo passwd ubuntu为ubuntu用户设置好密码;4、  sudo chmod 777 /etc/ssh/sshd_config为sshd_config配置文件设置权限;5、  vi /etc/ssh/sshd_config打开sshd_">
+  <meta name="description" content="1、先用AMS的密钥对登陆;2、执行
+
+sudo passwd root
+
+为root用户设置密码；3、执行su输入密码，切换到root用户，然后
+
+sudo passwd ubuntu
+
+为ubuntu用户设置好密码;4、
+
+sudo chmod 777 /etc/ssh/sshd_config
+
+为sshd_config配置文件设置权限;5、
+
+vi /etc/ssh/sshd_config">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2016-09-20-亚马逊AMS使用ROOT+密码登陆方法">
 <meta property="og:url" content="http://blog.bd6mm.cn/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/index.html">
 <meta property="og:site_name" content="BD6MM's Blog">
-<meta property="og:description" content="1、先用AMS的密钥对登陆;2、执行  sudo passwd root为root用户设置密码；3、执行su输入密码，切换到root用户，然后  sudo passwd ubuntu为ubuntu用户设置好密码;4、  sudo chmod 777 /etc/ssh/sshd_config为sshd_config配置文件设置权限;5、  vi /etc/ssh/sshd_config打开sshd_">
-<meta property="og:updated_time" content="2016-09-21T01:49:42.042Z">
+<meta property="og:description" content="1、先用AMS的密钥对登陆;2、执行
+
+sudo passwd root
+
+为root用户设置密码；3、执行su输入密码，切换到root用户，然后
+
+sudo passwd ubuntu
+
+为ubuntu用户设置好密码;4、
+
+sudo chmod 777 /etc/ssh/sshd_config
+
+为sshd_config配置文件设置权限;5、
+
+vi /etc/ssh/sshd_config">
+<meta property="og:updated_time" content="2016-09-21T01:57:04.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2016-09-20-亚马逊AMS使用ROOT+密码登陆方法">
-<meta name="twitter:description" content="1、先用AMS的密钥对登陆;2、执行  sudo passwd root为root用户设置密码；3、执行su输入密码，切换到root用户，然后  sudo passwd ubuntu为ubuntu用户设置好密码;4、  sudo chmod 777 /etc/ssh/sshd_config为sshd_config配置文件设置权限;5、  vi /etc/ssh/sshd_config打开sshd_">
+<meta name="twitter:description" content="1、先用AMS的密钥对登陆;2、执行
+
+sudo passwd root
+
+为root用户设置密码；3、执行su输入密码，切换到root用户，然后
+
+sudo passwd ubuntu
+
+为ubuntu用户设置好密码;4、
+
+sudo chmod 777 /etc/ssh/sshd_config
+
+为sshd_config配置文件设置权限;5、
+
+vi /etc/ssh/sshd_config">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -81,13 +123,33 @@
             
             <a href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/#comments" class="leave-reply">回复</a>
             
-            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/" data-id="citc95lff0000o0qnx8kjcc81" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/" data-id="citc9guff0005wgqnz1qupxr6" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <p>1、先用AMS的密钥对登陆;<br>2、执行<br>  sudo passwd root<br>为root用户设置密码；<br>3、执行su输入密码，切换到root用户，然后<br>  sudo passwd ubuntu<br>为ubuntu用户设置好密码;<br>4、<br>  sudo chmod 777 /etc/ssh/sshd_config<br>为sshd_config配置文件设置权限;<br>5、<br>  vi /etc/ssh/sshd_config<br>打开sshd_config配置文件;<br>6、找到PasswordAuthentication，值改为yes;<br>7、找到PermitRootLogin，值改为yes;<br>8、<br>  sudo chmod 644 /etc/ssh/sshd_config<br>9、service sshd restart重启sshd服务或者重启VPS，大功告成！</p>
+        <p>1、先用AMS的密钥对登陆;<br>2、执行</p>
+<blockquote>
+<p>sudo passwd root</p>
+</blockquote>
+<p>为root用户设置密码；<br>3、执行su输入密码，切换到root用户，然后</p>
+<blockquote>
+<p>sudo passwd ubuntu</p>
+</blockquote>
+<p>为ubuntu用户设置好密码;<br>4、</p>
+<blockquote>
+<p>sudo chmod 777 /etc/ssh/sshd_config</p>
+</blockquote>
+<p>为sshd_config配置文件设置权限;<br>5、</p>
+<blockquote>
+<p>vi /etc/ssh/sshd_config </p>
+</blockquote>
+<p>打开sshd_config配置文件;<br>6、找到PasswordAuthentication，值改为yes;<br>7、找到PermitRootLogin，值改为yes;<br>8、</p>
+<blockquote>
+<p>sudo chmod 644 /etc/ssh/sshd_config</p>
+</blockquote>
+<p>9、service sshd restart重启sshd服务或者重启VPS，大功告成！</p>
 
       
     </div><!-- .entry-content -->
