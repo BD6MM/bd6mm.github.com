@@ -65,6 +65,64 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-2016-09-30-LNMP_v1.3开启SSL方法" class="post-2016-09-30-LNMP_v1.3开启SSL方法 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/">LNMP_v1.3开启SSL方法</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/#comments" class="leave-reply">回复</a>
+            
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/" data-id="citpksjtg00048sqnzebcjguq" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>今天网站更换成了香港沙田VPS服务器，重新部署Lnmp环境时SSL访问出错，Google一番资料后发现几段代码可以完美解决。<br>1、把生成的SSL证书上传至服务器；<br>2、vi /usr/local/nginx/config/nginx.con ，打开Nginx配置文件；<br>3、在server{}里加入：</p>
+<blockquote>
+<p>listen 443 ssl;<br>ssl_certificate /home/wwwroot/ssl/<em>.crt;（上传SSL证书的绝对路径）<br>ssl_certificate_key /home/wwwroot/ssl/</em>.key;（上传SSL证书的绝对路径）<br>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;<br>fastcgi_param HTTPS on;</p>
+</blockquote>
+<p>4、运行lnmp restart命令，重启lnmp即可。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/">
+    <time datetime="2016-09-30T09:13:15.000Z" class="entry-date">
+        2016-09-30
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VPS/">VPS</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-2016-09-20-亚马逊AMS使用ROOT+密码登陆方法" class="post-2016-09-20-亚马逊AMS使用ROOT+密码登陆方法 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -73,7 +131,7 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/">2016-09-20-亚马逊AMS使用ROOT+密码登陆方法</a>
+      <a class="article-title" href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/">亚马逊AMS使用ROOT+密码登陆方法</a>
     </h1>
   
 
@@ -82,7 +140,7 @@
             
             <a href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/#comments" class="leave-reply">回复</a>
             
-            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/" data-id="citc9guff0005wgqnz1qupxr6" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/" data-id="citpksjt500018sqnyys043fa" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -147,7 +205,7 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2016/09/12/2016-09-04-桑园村西福兴寺外拍/">2016-09-04-桑园村西福兴寺外拍</a>
+      <a class="article-title" href="/2016/09/12/2016-09-04-桑园村西福兴寺外拍/">桑园村西福兴寺外拍</a>
     </h1>
   
 
@@ -156,7 +214,7 @@
             
             <a href="/2016/09/12/2016-09-04-桑园村西福兴寺外拍/#comments" class="leave-reply">回复</a>
             
-            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/12/2016-09-04-桑园村西福兴寺外拍/" data-id="citc9gufe0004wgqnbrrjqs3a" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/12/2016-09-04-桑园村西福兴寺外拍/" data-id="citpksju0000m8sqnqcaum0fc" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -205,7 +263,7 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2016/08/27/2016-08-27-文化家园门前的花/">2016-08-27-文化家园门前的花</a>
+      <a class="article-title" href="/2016/08/27/2016-08-27-文化家园门前的花/">文化家园门前的花</a>
     </h1>
   
 
@@ -214,7 +272,7 @@
             
             <a href="/2016/08/27/2016-08-27-文化家园门前的花/#comments" class="leave-reply">回复</a>
             
-            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/08/27/2016-08-27-文化家园门前的花/" data-id="citc9guf90001wgqnp4l57v93" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/08/27/2016-08-27-文化家园门前的花/" data-id="citpksju3000p8sqn0hdstjf8" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -263,7 +321,7 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2016/08/14/2016-08-12-夜逛郑州/">2016-08-12-夜逛郑州</a>
+      <a class="article-title" href="/2016/08/14/2016-08-12-夜逛郑州/">夜逛郑州</a>
     </h1>
   
 
@@ -272,7 +330,7 @@
             
             <a href="/2016/08/14/2016-08-12-夜逛郑州/#comments" class="leave-reply">回复</a>
             
-            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/08/14/2016-08-12-夜逛郑州/" data-id="citc9guf40000wgqn88cs8p6q" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/08/14/2016-08-12-夜逛郑州/" data-id="citpksjsi00008sqn3j09vvcc" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -326,7 +384,7 @@
             
             <a href="/2014/09/26/Nibiru-M1木星一号原生Android4-4-3卡刷包/#comments" class="leave-reply">回复</a>
             
-            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2014/09/26/Nibiru-M1木星一号原生Android4-4-3卡刷包/" data-id="citc9gufj0007wgqn8s9220f6" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2014/09/26/Nibiru-M1木星一号原生Android4-4-3卡刷包/" data-id="citpksjtx000l8sqntjgo7m9y" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -392,7 +450,7 @@
   <aside class="widget">
     <h3 class="widget-title">日志分类</h3>
     <div class="widget-content">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android设备/">Android设备</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/行动志/">行动志</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android设备/">Android设备</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/行动志/">行动志</a><span class="category-list-count">3</span></li></ul>
     </div>
   </aside>
 
@@ -404,23 +462,23 @@
       <ul>
         
           <li>
-            <a href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/">2016-09-20-亚马逊AMS使用ROOT+密码登陆方法</a>
+            <a href="/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/">LNMP_v1.3开启SSL方法</a>
           </li>
         
           <li>
-            <a href="/2016/09/12/2016-09-04-桑园村西福兴寺外拍/">2016-09-04-桑园村西福兴寺外拍</a>
+            <a href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/">亚马逊AMS使用ROOT+密码登陆方法</a>
           </li>
         
           <li>
-            <a href="/2016/08/27/2016-08-27-文化家园门前的花/">2016-08-27-文化家园门前的花</a>
+            <a href="/2016/09/12/2016-09-04-桑园村西福兴寺外拍/">桑园村西福兴寺外拍</a>
           </li>
         
           <li>
-            <a href="/2016/08/14/2016-08-12-夜逛郑州/">2016-08-12-夜逛郑州</a>
+            <a href="/2016/08/27/2016-08-27-文化家园门前的花/">文化家园门前的花</a>
           </li>
         
           <li>
-            <a href="/2014/09/26/Nibiru-M1木星一号原生Android4-4-3卡刷包/">Nibiru_M1木星一号原生Android4.4.3卡刷包</a>
+            <a href="/2016/08/14/2016-08-12-夜逛郑州/">夜逛郑州</a>
           </li>
         
       </ul>
@@ -432,7 +490,7 @@
   <aside class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nibiru-M1/">Nibiru M1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vps/">vps</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/寺庙/">寺庙</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/尼比鲁/">尼比鲁</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/木星一号/">木星一号</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/林州/">林州</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/桑园/">桑园</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/花/">花</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/郑州/">郑州</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nibiru-M1/">Nibiru M1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/">VPS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vps/">vps</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/寺庙/">寺庙</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/尼比鲁/">尼比鲁</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/木星一号/">木星一号</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/林州/">林州</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/桑园/">桑园</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/花/">花</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/郑州/">郑州</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -441,7 +499,7 @@
   <aside class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Nibiru-M1/" style="font-size: 10px;">Nibiru M1</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/寺庙/" style="font-size: 10px;">寺庙</a> <a href="/tags/尼比鲁/" style="font-size: 10px;">尼比鲁</a> <a href="/tags/木星一号/" style="font-size: 10px;">木星一号</a> <a href="/tags/林州/" style="font-size: 20px;">林州</a> <a href="/tags/桑园/" style="font-size: 10px;">桑园</a> <a href="/tags/花/" style="font-size: 10px;">花</a> <a href="/tags/郑州/" style="font-size: 10px;">郑州</a>
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Nibiru-M1/" style="font-size: 10px;">Nibiru M1</a> <a href="/tags/VPS/" style="font-size: 10px;">VPS</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/寺庙/" style="font-size: 10px;">寺庙</a> <a href="/tags/尼比鲁/" style="font-size: 10px;">尼比鲁</a> <a href="/tags/木星一号/" style="font-size: 10px;">木星一号</a> <a href="/tags/林州/" style="font-size: 20px;">林州</a> <a href="/tags/桑园/" style="font-size: 10px;">桑园</a> <a href="/tags/花/" style="font-size: 10px;">花</a> <a href="/tags/郑州/" style="font-size: 10px;">郑州</a>
     </div>
   </aside>
 

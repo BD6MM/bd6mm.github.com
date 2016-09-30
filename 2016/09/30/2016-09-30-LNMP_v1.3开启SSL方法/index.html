@@ -13,17 +13,24 @@
   
   
   
-  <title>Archives: 2014/9 | BD6MM&#39;s Blog</title>
+  <title>LNMP_v1.3开启SSL方法 | BD6MM&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="BD6MM&apos;s Website blog.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BD6MM's Blog">
-<meta property="og:url" content="http://blog.bd6mm.cn/archives/2014/09/index.html">
+  <meta name="description" content="今天网站更换成了香港沙田VPS服务器，重新部署Lnmp环境时SSL访问出错，Google一番资料后发现几段代码可以完美解决。1、把生成的SSL证书上传至服务器；2、vi /usr/local/nginx/config/nginx.con ，打开Nginx配置文件；3、在server{}里加入：
+
+listen 443 ssl;ssl_certificate /home/wwwroot/ssl/.c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LNMP_v1.3开启SSL方法">
+<meta property="og:url" content="http://blog.bd6mm.cn/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/index.html">
 <meta property="og:site_name" content="BD6MM's Blog">
-<meta property="og:description" content="BD6MM&apos;s Website blog.">
+<meta property="og:description" content="今天网站更换成了香港沙田VPS服务器，重新部署Lnmp环境时SSL访问出错，Google一番资料后发现几段代码可以完美解决。1、把生成的SSL证书上传至服务器；2、vi /usr/local/nginx/config/nginx.con ，打开Nginx配置文件；3、在server{}里加入：
+
+listen 443 ssl;ssl_certificate /home/wwwroot/ssl/.c">
+<meta property="og:updated_time" content="2016-09-30T09:36:14.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BD6MM's Blog">
-<meta name="twitter:description" content="BD6MM&apos;s Website blog.">
+<meta name="twitter:title" content="LNMP_v1.3开启SSL方法">
+<meta name="twitter:description" content="今天网站更换成了香港沙田VPS服务器，重新部署Lnmp环境时SSL访问出错，Google一番资料后发现几段代码可以完美解决。1、把生成的SSL证书上传至服务器；2、vi /usr/local/nginx/config/nginx.con ，打开Nginx配置文件；3、在server{}里加入：
+
+listen 443 ssl;ssl_certificate /home/wwwroot/ssl/.c">
   
   
     <link rel="icon" href="/css/images/favicon.ico">
@@ -63,51 +70,92 @@
     </nav>
 </header>
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-2016-09-30-LNMP_v1.3开启SSL方法" class="post-2016-09-30-LNMP_v1.3开启SSL方法 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="post type-post status-publish format-standard hentry archive-type-post">
-  <header class="entry-header">
-      
-  
-    <h1 class="entry-title">
-      <a class="archive-article-title" href="/2014/09/26/Nibiru-M1木星一号原生Android4-4-3卡刷包/">Nibiru_M1木星一号原生Android4.4.3卡刷包</a>
+    <h1 class="entry-title article-title">
+      LNMP_v1.3开启SSL方法
     </h1>
   
 
-  </header>
-  <footer class="entry-meta">
-    <a href="/2014/09/26/Nibiru-M1木星一号原生Android4-4-3卡刷包/">
-    <time datetime="2014-09-26T02:54:50.000Z" class="entry-date">
-        2014-09-26
+        
+        <div class="comments-link">
+            
+            <a href="/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/#comments" class="leave-reply">回复</a>
+            
+            <a href="javascript:void(0);" data-url="http://blog.bd6mm.cn/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/" data-id="citpksjtg00048sqnzebcjguq" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>今天网站更换成了香港沙田VPS服务器，重新部署Lnmp环境时SSL访问出错，Google一番资料后发现几段代码可以完美解决。<br>1、把生成的SSL证书上传至服务器；<br>2、vi /usr/local/nginx/config/nginx.con ，打开Nginx配置文件；<br>3、在server{}里加入：</p>
+<blockquote>
+<p>listen 443 ssl;<br>ssl_certificate /home/wwwroot/ssl/<em>.crt;（上传SSL证书的绝对路径）<br>ssl_certificate_key /home/wwwroot/ssl/</em>.key;（上传SSL证书的绝对路径）<br>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;<br>fastcgi_param HTTPS on;</p>
+</blockquote>
+<p>4、运行lnmp restart命令，重启lnmp即可。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/">
+    <time datetime="2016-09-30T09:13:15.000Z" class="entry-date">
+        2016-09-30
     </time>
 </a>
     
   <span class="article-delim">&#8226;</span>
   <div class="article-category">
-  <a class="article-category-link" href="/categories/Android设备/">Android设备</a>
+  <a class="article-category-link" href="/categories/Linux/">Linux</a>
   </div>
 
     
   <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nibiru-M1/">Nibiru M1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/尼比鲁/">尼比鲁</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/木星一号/">木星一号</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VPS/">VPS</a></li></ul>
 
     </footer>
 </article>
-  
-  
-    </div></section>
-  
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2016/09/20/2016-09-20-亚马逊AMS使用ROOT+密码登陆方法/" rel="next">亚马逊AMS使用ROOT+密码登陆方法 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-2016-09-30-LNMP_v1.3开启SSL方法" data-title="LNMP_v1.3开启SSL方法" data-url="http://blog.bd6mm.cn/2016/09/30/2016-09-30-LNMP_v1.3开启SSL方法/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'bd6mm'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
 
 </div></div>
         <div id="secondary" class="widget-area" role="complementary">
